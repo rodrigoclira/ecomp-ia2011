@@ -156,7 +156,7 @@ class RedeNeural():
         print ''.center(50,'-'),'\n'
         return acertos
 
-    def execultar(self,entrada,verbose=True):
+    def executar(self,entrada,verbose=True):
 
         contSaida = 0
         numero_neuronio = 0
@@ -246,7 +246,7 @@ if __name__ == '__main__':
         rede = RedeNeural(9,pesos,bias=1,numero_ciclos=8,alfa=1)
         acertos = rede.treinar(entrada,saidas)
         print acertos
-        resposta = rede.execultar([0,0,0,0,0,1,0,0,0])
+        resposta = rede.executar([0,0,0,0,0,1,0,0,0])
         print resposta
         
 

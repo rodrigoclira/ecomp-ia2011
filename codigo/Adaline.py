@@ -162,7 +162,7 @@ class RedeNeural():
             return neuronio.peso + self.alfa*(resposta_esperada-resposta_obtida)*neuronio.entrada*self.derivada(resposta_obtida)
 
             
-        def execultar(self,entrada):
+        def executar(self,entrada):
             resposta = 0
             numero_neuronio=0
             while numero_neuronio<len(self.rede):
@@ -262,9 +262,9 @@ if __name__ == '__main__':
     rede.verbose = False
     rede.treinamento(entrada,saida,ordem)
 
-    resposta = rede.execultar([1])
+    resposta = rede.executar([1])
     print u'\nNível da água: ',resposta
-    resposta = rede.execultar([.3])
+    resposta = rede.executar([.3])
 
     print resposta
 

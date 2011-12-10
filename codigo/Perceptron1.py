@@ -117,7 +117,7 @@ class RedeNeural():
             print 'FIM DA ETAPA DE TREINAMENTO'.center(50),'\n'
             print ''.center(50,'-'),'\n'
 
-        def execultar(self,entrada):
+        def executar(self,entrada):
             resposta = 0
             numero_neuronio=0
             while numero_neuronio<len(self.rede):
@@ -165,10 +165,10 @@ if __name__ == '__main__':
     rede.treinamento(entrada,saida,[[],[2,5,4,1,0,3]])
 
 
-    resultado = rede.execultar([1,1,1])
+    resultado = rede.executar([1,1,1])
     print 'Equidina: ',resultado
 
-    resultado = rede.execultar([0,1,0])
+    resultado = rede.executar([0,1,0])
     print 'Anaconda: ',resultado
     
     
