@@ -1,14 +1,15 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Redes Neurais.aux
 I couldn't open style file IEEEtran.bst
----line 27 of file Redes Neurais.aux
+---line 21 of file Redes Neurais.aux
  : \bibstyle{IEEEtran
  :                   }
 I'm skipping whatever remains of this command
+I found no \citation commands---while reading file Redes Neurais.aux
 I found no style file---while reading file Redes Neurais.aux
-You've used 12 entries,
+You've used 0 entries,
             0 wiz_defined-function locations,
-            109 strings with 643 characters,
+            85 strings with 533 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0
@@ -47,4 +48,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 0
-(There were 2 error messages)
+(There were 3 error messages)

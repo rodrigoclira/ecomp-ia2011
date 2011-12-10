@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.19)  26 NOV 2011 00:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.19)  10 DEC 2011 19:08
 entering extended mode
  %&-line parsing enabled.
 **"Redes Neurais.tex"
@@ -199,18 +199,18 @@ LaTeX Warning: Unused global option(s):
 (./Redes Neurais.aux)
 \openout1 = `"Redes Neurais.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
@@ -226,13 +226,13 @@ LaTeX Font Info:    ... okay on input line 35.
 )
 \c@lstlisting=\count112
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 57.
+(Font)              <12> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 57.
+(Font)              <8> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 57.
+(Font)              <6> on input line 53.
 
-Overfull \hbox (1.2078pt too wide) in paragraph at lines 58--60
+Overfull \hbox (1.2078pt too wide) in paragraph at lines 54--56
 []\OT1/ptm/m/n/12 O corpo de neur[]onio, tamb[]em chamado de soma, que []e re-s
 pons[]avel por co-le-tar e com-bi-nar informa[][]oes
  []
@@ -240,113 +240,58 @@ pons[]avel por co-le-tar e com-bi-nar informa[][]oes
 <imagens/neuronio.png, id=1, 500.87125pt x 318.18875pt>
 File: imagens/neuronio.png Graphic file (type png)
 
-<use imagens/neuronio.png>
-
-LaTeX Warning: Citation `MP43' on page 1 undefined on input line 72.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imagens/neuronio.png>]
-
-LaTeX Warning: Citation `Heb49' on page 2 undefined on input line 76.
-
-
-LaTeX Warning: Citation `Ros63' on page 2 undefined on input line 78.
-
-
-LaTeX Warning: Citation `WH60' on page 2 undefined on input line 78.
-
-
-LaTeX Warning: Citation `MP69' on page 2 undefined on input line 80.
-
-
-LaTeX Warning: Citation `Hop82' on page 2 undefined on input line 84.
-
-
-LaTeX Warning: Citation `Wer74' on page 2 undefined on input line 84.
-
-
-LaTeX Warning: Citation `RM86' on page 2 undefined on input line 84.
-
-
-LaTeX Warning: Citation `Ros62' on page 2 undefined on input line 88.
-
-
-LaTeX Warning: Citation `VAL05' on page 2 undefined on input line 93.
-
-
-LaTeX Warning: Citation `BLC98' on page 2 undefined on input line 94.
-
-<imagens/perceptron.jpg, id=11, 405.76593pt x 250.68657pt>
+<use imagens/neuronio.png> [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+} <./imagens/neuronio.png>] [2]
+<imagens/perceptron.jpg, id=13, 405.76593pt x 250.68657pt>
 File: imagens/perceptron.jpg Graphic file (type jpg)
 
 <use imagens/perceptron.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<imagens/degrau.png, id=12, 319.1925pt x 165.61874pt>
+<imagens/degrau.png, id=14, 319.1925pt x 165.61874pt>
 File: imagens/degrau.png Graphic file (type png)
  <use imagens/degrau.png>
-<imagens/degrau2.png, id=13, 296.10625pt x 110.4125pt>
+<imagens/degrau2.png, id=15, 296.10625pt x 110.4125pt>
 File: imagens/degrau2.png Graphic file (type png)
 
 <use imagens/degrau2.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-[2] <imagens/perceptron2.png, id=18, 268.00125pt x 182.6825pt>
+[3 <./imagens/perceptron.jpg> <./imagens/degrau.png> <./imagens/degrau2.png (PN
+G copy)>] <imagens/perceptron2.png, id=22, 268.00125pt x 182.6825pt>
 File: imagens/perceptron2.png Graphic file (type png)
 
-<use imagens/perceptron2.png>
-
-LaTeX Warning: Citation `Ros62' on page 3 undefined on input line 131.
-
-[3 <./imagens/perceptron.jpg> <./imagens/degrau.png> <./imagens/degrau2.png (PN
-G copy)> <./imagens/perceptron2.png>] [4] [5]
-
-LaTeX Warning: Citation `BJ90' on page 6 undefined on input line 314.
-
-[6] [7] <imagens/mlp.jpg, id=45, 501.875pt x 406.51875pt>
+<use imagens/perceptron2.png> [4 <./imagens/perceptron2.png>] [5] [6] [7]
+[8] <imagens/mlp.jpg, id=47, 501.875pt x 406.51875pt>
 File: imagens/mlp.jpg Graphic file (type jpg)
-
-<use imagens/mlp.jpg>
-<imagens/backpropagation.jpg, id=46, 417.56pt x 347.2975pt>
+ <use imagens/mlp.jpg>
+[9 <./imagens/mlp.jpg>]
+<imagens/backpropagation.jpg, id=51, 417.56pt x 347.2975pt>
 File: imagens/backpropagation.jpg Graphic file (type jpg)
 
-<use imagens/backpropagation.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[8 <./imagens/mlp.jpg>] (./Redes Neurais.bbl) [9 <./imagens/backpropagation.jpg
->] [10] (./Redes Neurais.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+<use imagens/backpropagation.jpg> [10 <./imagens/backpropagation.jpg>] [11]
+(./Redes Neurais.bbl) [12] (./Redes Neurais.aux) ) 
 Here is how much of TeX's memory you used:
- 3613 strings out of 495061
- 52394 string characters out of 1182620
- 117086 words of memory out of 3000000
- 6774 multiletter control sequences out of 15000+50000
- 33618 words of font info for 67 fonts, out of 3000000 for 9000
+ 3602 strings out of 495061
+ 52330 string characters out of 1182620
+ 116086 words of memory out of 3000000
+ 6763 multiletter control sequences out of 15000+50000
+ 33589 words of font info for 67 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 26i,6n,32p,838b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/
-urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb
-></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Redes Neurais.pdf" (10 pages, 252361 bytes).
+ 26i,7n,32p,838b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fon
+ts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.p
+fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/shar
+e/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Redes Neurais.pdf" (12 pages, 245694 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
