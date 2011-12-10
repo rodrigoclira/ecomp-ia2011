@@ -27,10 +27,6 @@
 \title{Redes Neurais Artificiais}
 
 \author{\IEEEauthorblockN{Anderson de Oliveira Marques,\\Rodrigo Cesar Lira da Silva,\\Sergio Ferreira Ribeiro}}
-%\and
-% \IEEEauthorblockN{Joaquim F. Martins-Filho,\\Daniel A. R. Chaves}
-%  \IEEEauthorblockA{Departament of Eletronic and Systems,\\Federal University of Pernambuco,\\Recife 50740-530, Pernambuco, Brazil \\ 
-%e-mail: \{jfmf, daniel.rchaves\}@ufpe.br} }
 
 \begin{document}
 \maketitle
@@ -66,58 +62,65 @@ por transmitir os estímulos para outras células.
  \includegraphics[width=8cm]{imagens/neuronio.png}
  \end{figure}
 
+\newpage
 \section{Breve histórico das Redes Neurais Artificiais}
 
 A primeira versão de um neurônio artificial foi proposto por McCullosh (neurofisiologista) e 
-Pitts (matemático)~\cite{MP43} que apresentaram um estudo em 1943 sugerindo a construção de uma 
+Pitts (matemático) que apresentaram um estudo em 1943 sugerindo a construção de uma 
 máquina inspirada no cérebro humano. Em função destes trabalhos pioneiros credita-se a eles 
 estabelecimento das bases da neuro computação. 
 
-Em seguida ao trabalho de McCulloch e Pitts surge a regra de aprendizagem proposta por Donald Hebb que se constitui na base de todas as regras de aprendizagem. Em seu famoso livro de 1949, The Organization of Behavior, o psicólogo Donald Hebb ~\cite{Heb49} procurou encontrar um mecanismo neural capaz de explicar como as informações podem ser armazenadas e recuperadas nos neurônios. A sua grande contribuição foi formular uma regra de aprendizagem enunciada da seguinte forma: ``Quando um neurônio recebe um estímulo de outro neurônio, e se ambos estão altamente ativos, o peso entre estes deve ser fortalecido, caso contrário enfraquecido``.
+Em seguida ao trabalho de McCulloch e Pitts surge a regra de aprendizagem proposta por Donald Hebb que se constitui na base de todas as regras de aprendizagem. Em seu famoso livro de 1949, The Organization of Behavior, o psicólogo Donald Hebb procurou encontrar um mecanismo neural capaz de explicar como as informações podem ser armazenadas e recuperadas nos neurônios. A sua grande contribuição foi formular uma regra de aprendizagem enunciada da seguinte forma: ``Quando um neurônio recebe um estímulo de outro neurônio, e se ambos estão altamente ativos, o peso entre estes deve ser fortalecido, caso contrário enfraquecido``.
 
-Entretanto, só em 1958 a primeira aplicação prática foi realizada por Frank Rosenblatt~\cite{Ros63} que desenvolveu uma rede neural Perceptron que era capaz de realizar reconhecimento de padrões através de uma regra de aprendizagem o que gerou um grande interesse nas redes neurais. No ano de 1960, Widrow e Hoff~\cite{WH60} apresentaram uma regra de aprendizagem para uma extensão de Perceptron chamada de ADALINE (ADAptive LInear NEuron). Esta regra baseada no método dos mínimos quadrados ficou conhecido como regra delta e é utilizada até os dias atuais.
+Entretanto, só em 1958 a primeira aplicação prática foi realizada por Frank Rosenblatt que desenvolveu uma rede neural Perceptron que era capaz de realizar reconhecimento de padrões através de uma regra de aprendizagem o que gerou um grande interesse nas redes neurais. No ano de 1960, Widrow e Hoff apresentaram uma regra de aprendizagem para uma extensão de Perceptron chamada de ADALINE (ADAptive LInear NEuron). Esta regra baseada no método dos mínimos quadrados ficou conhecido como regra delta e é utilizada até os dias atuais.
 
-Infelizmente, com a publicação de um trabalho de Minsky e Papert ~\cite{MP69} em 1969 verificou-se que o Perceptron era capaz de distinguir apenas padrões linearmente separáveis o que levou a um desinteresse nas redes neurais e, consequentemente, uma redução nas verbas de pesquisa.
+Infelizmente, com a publicação de um trabalho de Minsky e Papert em 1969 verificou-se que o Perceptron era capaz de distinguir apenas padrões linearmente separáveis o que levou a um desinteresse nas redes neurais e, consequentemente, uma redução nas verbas de pesquisa.
 
-Apesar destas limitações, alguns pesquisadore continuaram interessados nas redes neurais e em 1970 destaca-se a rede neural auto-organizável desenvolvida por Teuvo Kohonen \~{Koh82}\~{Koh88} (Rede de Kohonen). 
+Apesar destas limitações, alguns pesquisadore continuaram interessados nas redes neurais e em 1970 destaca-se a rede neural auto-organizável desenvolvida por Teuvo Kohonen (Rede de Kohonen). 
 
-O ressurgimento das redes neurais é atribuído ai trabalho do John Hopfield~\cite{Hop82} publicado em 1982, sobre as propiedades associativas das redes neurais (rede de Hopfield) e ao desenvolvimento do algoritmo Backpropagation que teve seus passos iniciais dados por Paul Werbos em 1970 ~\cite{Wer74} na sua tese de doutorado e posteriormente popularizado através da publicação feita por Rumelhart e McClelland em 1986  ~\cite{RM86}.
+O ressurgimento das redes neurais é atribuído ai trabalho do John Hopfield publicado em 1982, sobre as propiedades associativas das redes neurais (rede de Hopfield) e ao desenvolvimento do algoritmo Backpropagation que teve seus passos iniciais dados por Paul Werbos em 1970 na sua tese de doutorado e posteriormente popularizado através da publicação feita por Rumelhart e McClelland em 1986.
 
+\newpage
 \section{Perceptron}
 
-O modelo mais simples de Rede Neural, no qual várias unidades de processamento estão conectadas unicamente a uma unidade de saída, através dos pesos sinápticos é conhecida como {\it Perceptron} \cite{Ros62}.
+O modelo mais simples de Rede Neural, no qual várias unidades de processamento estão conectadas unicamente a uma unidade de saída, através dos pesos sinápticos é conhecida como {\it Perceptron}.
 
 Dentre as importantes características de similaridade destas redes com o cérebro humano, está a capacidade de aprender. Portanto, essas redes neurais artificiais possuem alguma forma de regra de aprendizagem que são responsáveis pela modificação dos pesos sinápticos, em função dos exemplos de entrada que são repetidamente apresentados. Assim pode-se dizer que as Redes Neurais Artificiais aprendem por exemplos.
 
 \begin{itemize}
- \item Aprendizado supervisionado - o aprendizado da rede é feito como o conhecimento prévio do resultado desejado, ou seja, são fornecidos, para a rede, o conjunto de exemplos de entrada e as respectivas respostas. As redes {\it Perceptron}, as redes multicamadas (MLP) e Adaline utilizam esse tipo de aprendizado~\cite{VAL05}.
-  \item Aprendizado não supervisionado - nesse tipo de aprendizado, a rede aprede com os próprios dados de entrada (somente os exemplos de entrada são mostrados a rede), ou seja, este algoritmo não requer conhecimento de saídas. Um exemplo que utiliza esse aprendizado é a rede de Kohonen ~\cite{BLC98}.
+ \item Aprendizado supervisionado - o aprendizado da rede é feito como o conhecimento prévio do resultado desejado, ou seja, são fornecidos, para a rede, o conjunto de exemplos de entrada e as respectivas respostas. As redes {\it Perceptron}, as redes multicamadas (MLP) e Adaline utilizam esse tipo de aprendizado.
+  \item Aprendizado não supervisionado - nesse tipo de aprendizado, a rede aprede com os próprios dados de entrada (somente os exemplos de entrada são mostrados a rede), ou seja, este algoritmo não requer conhecimento de saídas. Um exemplo que utiliza esse aprendizado é a rede de Kohonen.
 \end{itemize}
 
 A Perceptron apresentado por Frank Rosenblatt em 1958 é uma rede neural simples:
 
  \begin{figure}[h]
- \center 
+ \centering 
  \includegraphics[width=8cm]{imagens/perceptron.jpg}
+ \caption{Representação da Perceptron.}
  \end{figure}
 
 A Perceptron é composta de uma camada de entrada e uma camada de saída estando cada entrada ligada à saída através de uma conexão representada por uma ponderação chamada de peso sináptico em analogia como o neurônio biológico. 
 
 Como a Perceptron utiliza a formulação do neurônio proposta por McCullock e Pitts, a saída da Perceptron obedece a Lei do Tudo ou Nada, logo, a saída da {\it Perceptron} é estabelecida por uma função degrau que define quando o neurônio estará ativo ou em repouso. 
 
- \begin{figure}[h]
- \center 
- \includegraphics[width=6cm]{imagens/degrau.png}
- \newline \newline
- \includegraphics[width=5cm]{imagens/degrau2.png}
+ \begin{figure}[!htb]
+ \centering 
+ \begin{minipage}[b]{0.40\linewidth}
+ \includegraphics[width=6cm]{imagens/degrau.png} 
+ \end{minipage}
+ \begin{minipage}[b]{0.40\linewidth}
+ \includegraphics[width=5cm]{imagens/degrau2.png} 
+ \end{minipage}
+ \caption{Função degrau.}
  \end{figure}
 
 Portanto, a {\it Perceptron} pode ser definido como uma rede neural que é composta por uma camada de entrada onde estão as informações que alimentam a rede (as variáveis de entrada), uma função soma (entrada líquida) que pondera estas entradas através de pesos (chamados pesos sinápticos) e uma função saída (função degrau), também chamada de função de ativação que fornece sinal emitido pelo neurônio da camada de saída. Para entender os termos utilizados para caracterizar uma {\it Perceptron}, faz-se uso sem perda de generalidade da figura abaixo que apresenta uma {\it Perceptron} com 3 neurônios na camada de entrada e um neurônio na camada de saída. As entradas são representadas por $x_1$, $x_2$ e $x_n$ e a saída por $\omega$ e os pesos sinápticos por $w_1$, $w_2$, $w_n$ e $\theta$.\newline
 
- \begin{figure}[h]
- \center 
+ \begin{figure}[!htb]
+ \centering 
  \includegraphics[width=6cm]{imagens/perceptron2.png}
-
+ \caption{Perceptron com 3 neurônios na camada de entrada e um neurônio na camada de saída.}
  \end{figure}
 
 
@@ -128,7 +131,7 @@ O peso $\theta$ representa o limiar (bias) para uma entrada com valor +1. A funç
  net_1 = w_1x_1 + w_2x_2 + ... + w_nx_n + 1*\theta 
 \end{equation}
 
-A grande importância do trabalho de Frank Rosenblatt~\cite{Ros62} sobre o conhecimento de padrões consistiu em montrar que uma Perceptron é capaz de aprender a partir de um conjunto de exemplos. Ele estabeleceu uma regra de aprendizagem para a rede Perceptron que é dada por:
+A grande importância do trabalho de Frank Rosenblatt sobre o conhecimento de padrões consistiu em montrar que uma Perceptron é capaz de aprender a partir de um conjunto de exemplos. Ele estabeleceu uma regra de aprendizagem para a rede Perceptron que é dada por:
 
  \begin{equation}
  {\Delta}w_ij = \alpha(d_i - y_i)x_j, 
@@ -167,13 +170,13 @@ Durante o treinamento, ao finalizar a apresentação de todos os exemplos do conju
 
 
 
-
+\newpage
 \section{Adaline}
 
 Na mesma época em que Rosenblatt propôs o Perceptron, Widrow e Hoff propuseram um modelo 
 matemático de rede, denominado de Adaline (Adaptive Linear Element), também conhecido como (regra 
 delta), similar ao Perceptron, exceto no seu algoritmo de treinamento utiliza conceitos de 
-mínimos quadrados. As funções de ativação mais utilizadas são a linear (1) , sigmoidal logística (2) e tangente hiperbólica (3) ao invés de função degrau como na Perceptron.
+mínimos quadrados. As funções de ativação mais utilizadas são a linear (5) , sigmoidal logística (6) e tangente hiperbólica (7) ao invés de função degrau como na Perceptron.
 
 \begin{equation}
  y = f(u) = u,
@@ -211,7 +214,7 @@ Assim o ajuste a ser aplicado aos pesos é:
  w_ij(novo) = w_ij(antigo) + \alpha(d_i - y_i)x_jf'(net_i)
 \end{equation}
 
-\noindent $\alpha$ a taxa de aprendizagem, $w_ij$ são os pesos, $d_i$ é a resposta desejada, $y_i$ é a saída calculada, $x_j$ é a variável de entrada e f'($net_i$) é a derivada da função de saída. A regra delta como se pode observar na equação ANTERIOR possui um termo a mais do que a regra de teinamento do {\it Perceptron} este termo é a derivada da função de saída com relação à entrada líquida. 
+\noindent $\alpha$ a taxa de aprendizagem, $w_ij$ são os pesos, $d_i$ é a resposta desejada, $y_i$ é a saída calculada, $x_j$ é a variável de entrada e f'($net_i$) é a derivada da função de saída. A regra delta como se pode observar na equação 11 possui um termo a mais do que a regra de teinamento do {\it Perceptron} este termo é a derivada da função de saída com relação à entrada líquida. 
 
 Quando a função de saída também conhecida como função de ativação na unidade de saída é a linear dada por:
 
@@ -251,7 +254,7 @@ Quando a função de saída também conhecida como função de ativação na unidade de 
  \Delta{w_ij} = \alpha{x_j}(d_i - y_i)y_i(1-y_i)
 \end{equation}
 
-Portanto, neste caso das redes Adaline que não possuem camada escondida, o ajuste dos pesos é feito pela equação ANTERIOR de forma bastante simples, haja vista que todos os termos podem ser facilmente determinados.
+Portanto, neste caso das redes Adaline que não possuem camada escondida, o ajuste dos pesos é feito pela equação (18) de forma bastante simples, haja vista que todos os termos podem ser facilmente determinados.
 
 \subsection{Regra Delta}
 
@@ -311,7 +314,7 @@ Quando aos critérios de parada durante o treinamento estes serão detalhados no c
 
 Quando a rede está satisfatoriamente treinada, ela pode ser usada com outro conjunto de dados, graças a sua capacidade de generalização. Portanto, o uso de rede neural, depois de treinada, passa a ser bastante simples, sendo necessário apenas guardar os valores dos pesos sinápticos ótimos. 
 
-Este algoritmo garante a minimização do erro ao longo do tempo, através do ajuste dos pesos, ou seja, sua convergência garante que a adaptação dos pesos seja realizada num número finito de iterações. A prova de convergência pode ser encontrada em Beale e Jackson~\cite{BJ90}. Durante o treinamento o ajuste dos pesos pode ser realizado de duas maneiras: 
+Este algoritmo garante a minimização do erro ao longo do tempo, através do ajuste dos pesos, ou seja, sua convergência garante que a adaptação dos pesos seja realizada num número finito de iterações. A prova de convergência pode ser encontrada em Beale e Jackson. Durante o treinamento o ajuste dos pesos pode ser realizado de duas maneiras: 
 
 \begin{itemize}
  \item Atualização 'on line' (padrão): A atualização dos pesos acontece a cada apresentação à rede de um exemplo do conjunto de treinamento. A atualização dos pesos baseia-se somente no erro do exemplo apresentando naquele momento. Este processo é repetido até que todos os exemplos sejam apresentados à rede. Portanto, se existem N exemplos, em cada ciclo ocorrem N atualizações. Para que este método apresente estabilidade faz-se necessário a utilização de taxas de aprendizagem.
@@ -339,7 +342,7 @@ No caso de ter-se N exemplos e s neurônios na camada de saída a expressão geral 
 
 
 
-
+\newpage
 \section{MLP}
 
 Quando Redes Neurais Artificiais de uma só camada são utilizadas os padrões de treinamento apresentados à entrada são mapeados diretamente em um conjunto de padrões de saída da rede, ou seja não é possível a formação de uma representação interna. Neste caso, a codificação proveniente do mundo exterior deve ser suficiente para implementar esse mapeamento.
@@ -352,9 +355,10 @@ Contudo, o desenvolvimento do algoritmo de treinamento backpropagation, por Rume
 
 Nessas redes, cada camada tem uma função específica. A camada de saída recebe os estímulos da camada intermediária e constrói o padrão que será a resposta. As camadas intermediárias funcionam como extratoras de características, seus pesos são uma codificação de características apresentadas nos padrões de entrada e permitem que a rede crie sua própria representação, mais rica e complexa, do problema.
 
- \begin{figure}[h]
+ \begin{figure}[!htb]
  \center 
  \includegraphics[width=9cm]{imagens/mlp.jpg}
+ \caption{Rede Neural MLP.}
  \end{figure}
 
 
@@ -368,9 +372,10 @@ Durante o treinamento com o algoritmo backpropagation, a rede opera em uma sequê
 
 As redes que utilizam backpropagation trabalham com uma variação da regra delta, apropriada para redes multi-camadas: a regra delta generalizada. A regra delta padrão essencialmente implementa um gradiente descendente no quadrado da soma do erro para funções de ativação lineares. Redes sem camadas intermediárias, podem resolver problemas onde a superfície de erro tem a forma de um parabolóide com apenas um mínimo. Entretanto, a superfície do erro pode não ser tão simples, como a ilustrada na figura abaixo, e suas derivadas mais difíceis de serem calculadas. Nestes casos devem ser utilizadas redes com camadas intermediárias. Ainda assim, as redes ficam sujeitas aos problemas de procedimentos "hill-climbing", ou seja, ao problema de mínimos locais.
 
- \begin{figure}[h]
- \center 
+ \begin{figure}[!htb]
+ \centering 
  \includegraphics[width=10cm]{imagens/backpropagation.jpg}
+ \caption{Algoritmo Backpropagation.}
  \end{figure}
 
 A regra delta generalizada funciona quando são utilizadas na rede unidades com uma função de ativação semi-linear, que é uma função diferenciável e não decrescente. Note que a função threshold não se enquadra nesse requisito. Uma função de ativação amplamente utilizada, nestes casos, é a função sigmoid.
@@ -398,8 +403,9 @@ Depois que a rede estiver treinada e o erro estiver em um nível satisfatório, el
 
 %É muito difícil definir a arquitetura ideal da rede de forma que ela seja tão grande quanto o necessário para conseguir obter as representações necessárias, ao mesmo tempo pequena o suficiente para se ter um treinamento mais rápido. Não existem regras claras para se definir quantas unidades devem existir nas camadas intermediárias, quantas camadas, ou como devem ser as conexões entre essas unidades. Para resolver este tipo de problema, Algoritmos Genéticos poderiam ser utilizados para encontrar automaticamente boas arquiteturas de redes neurais, eliminando muitas armadilhas associadas às abordagens de engenharia humana.
 
-
+\newpage
 \section{Conclusão}
+
 
 \bibliographystyle{IEEEtran}
 \bibliography{Bibliografia/bibliografia}
