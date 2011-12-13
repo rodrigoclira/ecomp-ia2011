@@ -135,6 +135,7 @@ class RedeNeural():
 
             print 'net: %d' % (net)
 
+ 
             if net>=0:
                 resposta = 1
             else:
@@ -149,7 +150,8 @@ if __name__ == '__main__':
     #entrada = [ [0,0], [0,1], [1,0], [1,1]  ]
     #saida = [0,0,0,1]
     #pesos = [0,3,3]
-
+         
+    #Glandula,Ovoviparo,Terrestre   
     entrada = [ [-1,-1,1], # Galinha
                 [1,-1,1], # Elefante
                 [-1,-1,-1], # Peixe
@@ -158,6 +160,7 @@ if __name__ == '__main__':
                 [1,-1,-1]] # baleia
 
     saida = [0,1,0,1,0,1]
+
     pesos0 = [-1,-1,-1,-1]
     rede = RedeNeural(3,pesos0,1,1,2)
 

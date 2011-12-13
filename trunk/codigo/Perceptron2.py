@@ -199,11 +199,23 @@ class RedeNeural():
        
 if __name__ == '__main__':
 
+#Proposta de avaliação de credito
 # ct fidelidade | compra > 50 | Pagamento dinheiro
 # 00 - diamante
 # 01 - ouro
 # 10 - prata
 # 11 - bronze
+
+#x1=Restricoes no nome
+#x2=Tempo de conta maior que 5 anos
+#x3= Bairro | Centro = 11 Suburbio= 01 Outro = 00
+#x4= Bairro 
+#x5= Bens imoveis
+#x6= Bens Moveis
+#x7= Aplicacoes Financeiras
+#x8= Experiencia de credito menor do que 1 ano
+#x9= Crediario em outro estabelecimento.
+
 
     entrada = [
                 [1,0,1,1,0,0,0,1,1],
@@ -243,16 +255,13 @@ if __name__ == '__main__':
         ciclos = 1
 
         
-        rede = RedeNeural(9,pesos,bias=1,numero_ciclos=8,alfa=1)
+        rede = RedeNeural(9,pesos,bias=1,numero_ciclos=12,alfa=1)
         acertos = rede.treinar(entrada,saidas)
-        print acertos
-        resposta = rede.executar([0,0,0,0,0,1,0,0,0])
+        #print acertos
+	
+        resposta = rede.executar([0,0,0,0,0,0,1,1,1])
         print resposta
         
-
-        
-#        a = rede.execultar([-1,-1,-1])
-#        print a
 
     except RedeException: # Ver isso
         print RedeException.message
