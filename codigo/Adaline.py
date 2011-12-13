@@ -196,100 +196,53 @@ def sigmoide(numero):
             
 if __name__ == '__main__':
   
-  #  entrada = [ [0.3,0.1,0.1], # Galinha
-  #              [0.03,0.02,0], # Elefante
-  #              [1,1,1], # Peixe
-  #              [0.4,0.15,1], # Ornitorrinco
-  #              [0.9,0.8,0.8], # Escorpiao
-  #              [0.5,0.5,0.9]] # baleia
 
-  #  saida = [0.19,0.11,0.6,.31,0.52,.39]
-  #  pesos0 = [0,0,0,0]
+    saida = [  0.19,
+               0.11,
+               0.60,
+               0.31,
+               0.52,
+               0.39,
+            ] 
 
-    saida = [0.00121,
-               0.0048,
-               0.01037,
-               0.02468,
-               0.03999,
-               0.0611,
-               0.07789,
-               0.09853,
-               0.12278,
-               0.14007,
-               0.15709,
-               0.17845,
-               0.19844,
-               0.20819]
-        
-    entrada = [[.3],[.35],[.4],[.45],[.5],[.55],[.6],[.65],[.7],[.75],[.8],[.85],[.9],[.95]]           
-    if len(saida) == len(entrada):
-        print 'ok'
-
-    cont=0
-    ordem = []
-    while cont<100000:
-        lista = []
-        numeros = range(len(entrada))
-        while numeros:
-            escolhido = choice(numeros)
-            numeros.remove(escolhido)
-            lista.append(escolhido)
-        ordem.append(lista)
-        cont+=1
-
-    
+    entrada = [ [.3,.1,.1],
+	        [.03,.02,0],
+		[1,1,1],
+		[.4,0.15,1],
+		[.9,.8,.8],
+		[.5,.5,.9]
+	      ]
+	
                
+    # Iniciar os pesos com 0
 
-    pesos0 = [0.5,1]
-    rede = RedeNeural(LINEAR,1,pesos0,1,0.7,100000)
-  #  ordem = [
-  #              [1,2,3,4,5,6],
-  #              [3,6,5,2,1,4],
-  #              [5,4,1,6,3,2],
-  #              [6,1,2,5,4,3],
-  #              [2,3,4,1,6,5],
-  #              [4,5,6,3,2,1],
-  #              [1,2,3,4,5,6],
-  #              [3,6,5,2,1,4],
-  #              [5,4,1,6,3,2],
-  #              [6,1,2,5,4,3],
-  #              [2,3,4,1,6,5],
-  #              [4,5,6,3,2,1]
-  #          ]
+    pesos0 = [0,0,0,0]
+    rede = RedeNeural(LINEAR,3,pesos0,1,0.5,3)
 
-    #ordem = [ [],[7,4,5,2,3,8,1,6]]
-    #ordem = map(lambda x: [n-1 for n in x ] , ordem)
-    rede.verbose = False
-    rede.treinamento(entrada,saida,ordem)
+    # Ordem da apresentação dos exemplos	
+    ordem = [
+                [1,2,3,4,5,6],
+                [3,6,5,2,1,4],
+                [5,4,1,6,3,2],
+                [6,1,2,5,4,3],
+                [2,3,4,1,6,5],
+                [4,5,6,3,2,1],
+                [1,2,3,4,5,6],
+                [3,6,5,2,1,4],
+                [5,4,1,6,3,2],
+                [6,1,2,5,4,3],
+                [2,3,4,1,6,5],
+                [4,5,6,3,2,1]
+            ]
 
-    resposta = rede.executar([1])
+    ordem = map(lambda x: [n-1 for n in x ] , ordem)
+    rede.verbose = True
+
+    #Treinar a rede
+    rede.treinamento(entrada,saida,ordem) 
+
+
+    #Calcular o valor do nível de água para os valores  (.7, .6, .85)
+    resposta = rede.executar([.7,.6,.85])
     print u'\nNível da água: ',resposta
-    resposta = rede.executar([.3])
-
-    print resposta
-
-    
-    
-    """
-    entrada = [[1,1,1,0,1,0,0,1,0],[1,0,1,1,1,1,1,0,1]]
-    entrada = [[1,1,1,0,1,0,0,1,0],[0,1,0,0,1,0,0,1,0]]
-    saida = [1,0,1]
-    pesos = [0]*10
-    rede  = RedeNeural(9,pesos,1,1,3)
-    rede.treinamento(entrada,saida)
-
-    resultado = rede.comparar([1,1,1,1,1,1,0,1,0])
-    print 'T modifificado: %d \n'%resultado
-    resultado = rede.comparar([1,0,0,1,1,1,1,0,1])
-    print 'H modificado: ',resultado
-
-    resultado = rede.comparar([1]*9)
-    print 'Matriz completa: ',resultado
-
-    resultado = rede.comparar([0,1,0,0,1,0,1,1,1])
-    print 'T invertido 180: ',resultado
-    """
-
-#    for neuronio in rede.rede:
-#        print neuronio
 
